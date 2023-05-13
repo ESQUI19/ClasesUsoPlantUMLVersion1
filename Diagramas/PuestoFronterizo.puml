@@ -1,3 +1,14 @@
 @startuml
+left to right direction
+actor "Ciudadano" as ciudadano
+actor "Ciudadano extranjero" as ciudadanoExtranjero
+
+usecase "Registrar entrada" as UC1
+usecase "Tomar huellas" as UC2
+
+ciudadano -- UC1
+ciudadanoExtranjero -- UC2
+ciudadanoExtranjero -right-> ciudadano
+UC2 .right.> UC1: <<extend>>
 
 @enduml

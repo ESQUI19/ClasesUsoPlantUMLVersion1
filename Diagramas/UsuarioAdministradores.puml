@@ -1,3 +1,25 @@
 @startuml
+left to right direction
+actor "Usuario" as usuario
+actor "Administrador" as administrador
+
+usecase "Iniciar sesión" as UC1
+usecase "Recuperar contraseña" as UC2
+usecase "Modificar contraseña" as UC3
+usecase "Cerrar sesión" as UC4
+
+usecase "Registrar usuario" as UC5
+usecase "Instalar programa" as UC6
+
+usuario -- UC1
+usuario -- UC2
+usuario --UC3
+usuario -- UC4
+
+administrador -- UC5
+administrador -- UC6
+
+administrador -right->usuario
+
 
 @enduml

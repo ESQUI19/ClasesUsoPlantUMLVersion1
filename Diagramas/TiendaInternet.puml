@@ -1,3 +1,22 @@
 @startuml
+left to right direction
+actor "new Actor" as nuevoActor
+usecase "Identificarse" as UC1
+usecase "Pagar" as UC2
+usecase "Elegir mensajero" as UC3
+usecase "Confirmar" as UC4
+usecase "Registrarse" as UC5
+usecase "Pagar con tarjeta" as UC6
+usecase "Pagar por transferencia" as UC7
+
+nuevoActor -- UC1
+nuevoActor -- UC3
+nuevoActor -- UC4
+nuevoActor -- UC2
+
+
+UC5 .up.> UC1: <<extend>>
+UC6 -up-> UC2
+UC7 -up-> UC2
 
 @enduml

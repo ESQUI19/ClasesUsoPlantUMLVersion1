@@ -1,3 +1,17 @@
 @startuml
+left to right direction
+actor "Cliente" as cliente
+usecase "Meter dinero" as UC1
+usecase "Pedir azucar" as UC2
+usecase "Pedir producto" as UC3
+usecase "Cancelar" as UC4
+usecase "Devolver dinero" as UC5
 
+cliente -- UC1
+cliente -- UC2
+cliente -- UC3
+cliente -- UC4
+
+UC3 --> UC5 : <<include>>
+UC4 --> UC5 :<<include>>
 @enduml
